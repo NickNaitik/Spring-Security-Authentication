@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "5dc7f14c-c477-4500-9d65-9e6b7d49e734",
+		"name": "Spring Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28168325"
+	},
+	"item": [
+		{
+			"name": "GENERATE TOKEN FOR DEVELOPER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"nick.naitik@gmail.com\",\r\n    \"password\": \"Nick@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GENERATE TOKEN FOR Manager",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"rohit.desai@gmail.com\",\r\n    \"password\": \"Rohit@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PUBLIC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Manager Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2hpdC5kZXNhaUBnbWFpbC5jb20iLCJpYXQiOjE2OTYxNzMwNDYsImV4cCI6MTY5NjIwOTA0Nn0.ciGn735raAA679hls6QsC8r_ZR47uZZAYdiGPLvcDqo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/managerData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"managerData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Developer Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaWNrLm5haXRpa0BnbWFpbC5jb20iLCJpYXQiOjE2OTYxNzI0OTIsImV4cCI6MTY5NjIwODQ5Mn0.U3jvpD9UguNA-LGolWiClERQWE_rcSqkzEoyIaaC5-E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/devloperData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"devloperData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
